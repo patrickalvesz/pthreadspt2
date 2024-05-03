@@ -28,7 +28,7 @@ a)
   
   "Protegemos" a atualização da variável sum: Cada thread calcula sua própria soma parcial (my_sum). Em seguida, bloqueamos o Mutex antes de adicionar my_sum à soma global sum, e desbloqueamos o Mutex depois. Isso garante que apenas uma thread possa atualizar sum de cada vez.
   
-	Destruímos o Mutex no final: Depois que todas as threads terminaram, destruímos o Mutex com "pthread_mutex_destroy".
+   Destruímos o Mutex no final: Depois que todas as threads terminaram, destruímos o Mutex com "pthread_mutex_destroy".
 
   Com isso, a variável sum é "protegida" de acessos simultâneos pelas threads.
 
@@ -37,11 +37,11 @@ b)
 
   Sem Mutex, várias threads podiam mexer na variável sum ao mesmo tempo. Isso podia causar confusão e fazer com que o cálculo de pi não saísse certo.
   
-	Com Mutex, ele "protege" a variável sum. Só permite que uma thread mexa na sum de cada vez. Isso evita a confusão e faz com que o cálculo de pi seja mais exato.
+  Com Mutex, ele "protege" a variável sum. Só permite que uma thread mexa na sum de cada vez. Isso evita a confusão e faz com que o cálculo de pi seja mais exato.
  
-	Dessa forma, conseguimos ter certeza de que o cálculo do valor de pi vai ser preciso, mesmo quando várias threads estão trabalhando juntas.
+  Dessa forma, conseguimos ter certeza de que o cálculo do valor de pi vai ser preciso, mesmo quando várias threads estão trabalhando juntas.
  
-	Então, a principal causa das divergências nos valores atingidos é a presença ou ausência de condições de corrida.
+  Então, a principal causa das divergências nos valores atingidos é a presença ou ausência de condições de corrida.
 
 
 # Print da Execução
